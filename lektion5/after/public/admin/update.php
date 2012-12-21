@@ -19,13 +19,6 @@
   $thumbnail_url = $item->thumbnail_url;
 
   if (isset($_FILES['thumbnail'])) {
-
-
-    echo "<pre>";
-    var_dump($_FILES['thumbnail']);
-    echo "</pre>";
-    break;
-
     $thumbnail_url = set_thumbnail_image($item, $_FILES['thumbnail']);
 
     if (!$thumbnail_url) {
